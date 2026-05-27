@@ -15,7 +15,8 @@ async function updateSensex() {
 
     const records =
       json?.resultData || [];
-
+    console.log(JSON.stringify(records, null, 2));
+    
     if (!records.length) {
       console.log("No records");
       return;
