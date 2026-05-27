@@ -33,8 +33,10 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-          git add data/sensex-ticks.json
+          git add .
 
-          git commit -m "Auto update Sensex ticks" || echo "No changes"
+          git status
+
+          git commit -m "Auto update Sensex ticks" || true
 
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/jksarkar6263/sensex-future-chart.git HEAD:main
