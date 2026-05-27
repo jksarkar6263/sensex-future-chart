@@ -2,7 +2,7 @@ name: Update Sensex Futures
 
 on:
   schedule:
-    - cron: "*/5 3-11 * * 1-5"
+    - cron: "*/2 3-11 * * 1-5"
 
   workflow_dispatch:
 
