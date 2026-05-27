@@ -63,16 +63,18 @@ async function updateSensex() {
         existing.ticks[expiry];
 
       const already =
-        arr.find(
-          x => x.time === tickTime
-        );
+      arr.find(
+      x =>
+      x.time === tickTime &&
+      x.ltp === ltp
+     );
 
       if (!already) {
 
-        arr.push({
-          time: tickTime,
-          ltp
-        });
+      arr.push({
+      time: tickTime,
+      ltp
+    });
 
         // keep last 400 ticks
         if (arr.length > 400) {
